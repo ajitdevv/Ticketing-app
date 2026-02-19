@@ -1,5 +1,4 @@
 
-import Temp from "./component/temp"
 import Hader from "./prentcomponents/Hader"
 import Hading from "./prentcomponents/Hading"
 import User from "./prentcomponents/User"
@@ -16,7 +15,6 @@ function App() {
     <User />
     <Contant />
     <Slider />
-    <Temp />
     <PromoBanner />
    </div>
   )

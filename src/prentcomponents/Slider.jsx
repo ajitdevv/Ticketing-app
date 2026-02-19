@@ -60,7 +60,9 @@ const Slider = () => {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
-            
+            .slider-track {
+      animation: scrollLeft 25s linear infinite;
+    }
     .slider-track:hover {
       animation-play-state: paused;
     }
@@ -69,20 +71,19 @@ const Slider = () => {
 
       <div
         className="flex whitespace-nowrap slider-track"
-        style={{
-          animation: "scrollLeft 25s linear infinite",
-        }}
+        
       >
         {[...data, ...data].map((item, index) => (
           <div
             key={index}
-            className="mx-6 flex flex-col items-center min-w-62.5"
+            className="mx-6 flex flex-col items-start min-w-62.5"
           >
-            <div className="w-62.5 h-42.5 rounded-xl overflow-hidden bg-gray-300">
+            <div className="w-62.5 h-42.5 rounded-xl overflow-hidden hover:shadow-[3px_-3px_0px_0px_rgba(250,204,21,0.7),6px_-6px_0px_0px_rgba(74,222,128,0.7)]
+ transition-shadow duration-500">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
             <p className="mt-4 text-lg font-medium text-gray-800">
