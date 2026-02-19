@@ -53,7 +53,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden mt-40 py-10 bg-background">
+    <div className="w-full overflow-hidden mt-40 mb-19 pt-10 bg-background">
       <style>
         {`
           @keyframes scrollLeft {

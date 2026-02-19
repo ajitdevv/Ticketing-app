@@ -1,10 +1,11 @@
 
 import Hader from "./prentcomponents/Hader"
 import Hading from "./prentcomponents/Hading"
-import User from "./prentcomponents/User"
-import Contant from "./prentcomponents/Contant"
 import PromoBanner from "./component/Pop"
 import Slider from "./prentcomponents/Slider"
+import Subhader from "./prentcomponents/Subhader"
+import Actionline from "./prentcomponents/Actionline"
+import Footer from "./prentcomponents/Footer"
 
 
 function App() {
@@ -12,10 +13,11 @@ function App() {
    <div className="">
     <Hader />
     <Hading />
-    <User />
-    <Contant />
+    <Subhader />
     <Slider />
+    <Actionline />
     <PromoBanner />
+    <Footer />
    </div>
   )
 }
