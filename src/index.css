@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-extra-muted: var(--extra-muted);
+
+  --color-card: var(--card);
+  --color-card-soft: var(--card-soft);
+
+  --color-border: var(--border);
+  --color-shadow: var(--shadow);
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+
+  /* Light mode */
+  :root {
+    --background: #ffffff;
+    --card: #dcdbdb;
+    --card-soft: #eff3f4;
+
+    --foreground: #0d0c22;
+    /* --muted: #323233; */
+    --muted: #7b7194;
+    --extra-muted: #ececec;
+
+    --primary: #C9A24D;
+    --primary-foreground: #FFFFFF;
+    --accent: #ea4d8a;
+
+    --border: #EFEFEF;
+    --shadow: 1px 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: #080d34;
+    --card: #323252;
+    --card-soft: #0e0e1f;
+    --foreground: #f3f8fc;
+    --muted: #9BA3AF;
+
+    --primary: #4F9CF9;
+    --primary-foreground: #FFFFFF;
+
+    --accent: #7DD3FC;
+    /* Soft cyan highlight */
+
+    --border: #2C2C30;
+    /* Subtle charcoal border */
+    --shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  html {
+    font-family: var(--font-sans);
+  }
+}
