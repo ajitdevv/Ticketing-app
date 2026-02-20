@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "./Logo";
 import { Search } from "./Search";
 
-const Hamburgermenu = () => {
-  let [open, setOpen] = useState(false);
+const Hamburgermenu = ({setOpen,open}) => {
+
   return (
     <div className="flex gap-4 ">
       <div className="flex gap-4 items-center">

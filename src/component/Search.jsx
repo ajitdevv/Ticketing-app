@@ -1,5 +1,6 @@
 import { ChevronDown, SearchIcon } from "lucide-react";
 import React, { useState } from "react";
+import DropdownToggle from "./ArrowSet";
 
 export const Search = () => {
   let [hide, sethide] = useState(false);
@@ -14,7 +15,7 @@ export const Search = () => {
       />
       <div className="absolute top-0 right-0 flex gap-2">
         <div className="flex relative">
-          <div
+          {/* <div
             onClick={() => sethide(!hide)}
             className="flex gap-1  items-center group cursor-pointer"
           >
@@ -29,12 +30,39 @@ export const Search = () => {
               
               <ChevronDown size={15} />
             </span>
-          </div>
+          </div> */}
+          <DropdownToggle
+            label="Services"
+            isOpen={hide}
+            onToggle={() => sethide(!hide)}
+            className="text-sm font-semibold "
+          />
           {hide ? (
             <div className="absolute top-13.5 p-5 pr-11  bg-background shadow-2xl flex flex-col items-start gap-3 *:hover:text-foreground *:text-muted *:font-semibold rounded-xl">
-              <button onClick={() =>{  sethide(!hide); setvaluse("Shots")}}>Shots</button>
-              <button onClick={() =>{  sethide(!hide); setvaluse("Designers")}}>Designers</button>
-              <button onClick={() =>{  sethide(!hide); setvaluse("Services")}}>Services</button>
+              <button
+                onClick={() => {
+                  sethide(!hide);
+                  setvaluse("Shots");
+                }}
+              >
+                Shots
+              </button>
+              <button
+                onClick={() => {
+                  sethide(!hide);
+                  setvaluse("Designers");
+                }}
+              >
+                Designers
+              </button>
+              <button
+                onClick={() => {
+                  sethide(!hide);
+                  setvaluse("Services");
+                }}
+              >
+                Services
+              </button>
             </div>
           ) : (
             <div hidden></div>

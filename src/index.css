@@ -63,6 +63,7 @@
     
   }
   html {
+    scroll-behavior: smooth;
     font-family: var(--font-sans);
   }
 }

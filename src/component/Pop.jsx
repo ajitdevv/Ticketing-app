@@ -3,18 +3,17 @@ import React, { useEffect, useState } from "react";
 const PromoBanner = () => {
   const [show, setShow] = useState(false);
 
-  // 3 sec baad show hoga
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
-      className={`fixed bottom-0 left-0 w-full transition-transform duration-500 z-50 ${
+      className={`fixed bottom-0 left-0 w-full transition-transform duration-500 z-97 ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >

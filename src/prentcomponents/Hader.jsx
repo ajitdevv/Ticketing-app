@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { ButtonPrimary, ButtonSecondary } from "../component/Button";
 import Hamburgermenu from "../component/Hamburgermenu";
+import Manu from "./Manu";
 
 const Hader = () => {
+  let [open, setOpen] = useState(false);
+
   return (
-    <div className="flex justify-between items-center sticky top-0 z-100 py-5 px-10 bg-background">
+    <div className="flex relative justify-between items-center sticky top-0 z-100 py-5 px-10 bg-background">
       <div>
-        <Hamburgermenu />
+        <Hamburgermenu open={open} setOpen={setOpen} />
       </div>
       <div className="flex gap-4 items-center">
         <ButtonSecondary children={"Sign up"} />
         <ButtonPrimary children={"Log in"} />
       </div>
+     <Manu open={open}/>
     </div>
   );
 };
