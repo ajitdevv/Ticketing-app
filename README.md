@@ -2,7 +2,7 @@
 
 A simple Ticketing UI built using ReactJS.
 
-Live Demo: https://ticketing-app-seven-rose.vercel.app/
+Live Link: https://ticketing-app-seven-rose.vercel.app/
 
 ---
 
