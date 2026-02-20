@@ -5,7 +5,6 @@ import DropdownToggle from "./ArrowSet";
 export const Search = () => {
   let [hide, sethide] = useState(false);
   let [valuse, setvaluse] = useState("Shots");
-  console.log(hide);
   return (
     <div className="w-130 h-fit relative">
       <input
@@ -15,24 +14,8 @@ export const Search = () => {
       />
       <div className="absolute top-0 right-0 flex gap-2">
         <div className="flex relative">
-          {/* <div
-            onClick={() => sethide(!hide)}
-            className="flex gap-1  items-center group cursor-pointer"
-          >
-            <span className="text-foreground text-sm font-semibold group-hover:text-muted">
-              {valuse}
-            </span>
-            <span
-              className={`mt-1 transition-transform duration-300 group-hover:text-muted ${
-                hide ? "rotate-180" : "rotate-0"
-              }`}
-            >
-              
-              <ChevronDown size={15} />
-            </span>
-          </div> */}
           <DropdownToggle
-            label="Services"
+            label={valuse}
             isOpen={hide}
             onToggle={() => sethide(!hide)}
             className="text-sm font-semibold "
